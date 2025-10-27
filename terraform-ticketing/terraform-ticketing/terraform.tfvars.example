@@ -1,0 +1,77 @@
+# terraform.tfvars.example
+# 이 파일을 복사해서 terraform.tfvars로 이름 변경 후 사용하세요!
+# cp terraform.tfvars.example terraform.tfvars
+
+# ==========================================
+# 기본 설정
+# ==========================================
+aws_region   = "ap-northeast-2"
+project_name = "ticketing"
+environment  = "dev"  # dev, staging, prod
+
+# ==========================================
+# VPC 설정
+# ==========================================
+vpc_cidr           = "10.0.0.0/16"
+availability_zones = ["ap-northeast-2a", "ap-northeast-2c"]
+
+# 비용 절감: Dev 환경에서는 NAT Gateway 비활성화 가능
+enable_nat_gateway = true  # false로 설정 시 월 $65 절감
+
+# ==========================================
+# 데이터베이스 설정
+# ==========================================
+db_name     = "ticketing"
+db_username = "admin"
+db_password = "YourSecurePassword123!"  # 🔒 반드시 변경하세요!
+
+# 인스턴스 타입
+# - Dev: db.t3.medium (저렴)
+# - Prod: db.r5.large (성능)
+db_instance_class = "db.t3.medium"
+
+# Read Replica 개수 (읽기 성능 향상)
+db_read_replica_count = 1
+
+# ==========================================
+# Redis 설정
+# ==========================================
+redis_node_type = "cache.t3.micro"  # Dev용 (Prod는 cache.r5.large)
+redis_num_nodes = 2  # Multi-AZ 고가용성
+
+# ==========================================
+# EC2 Auto Scaling 설정
+# ==========================================
+ec2_instance_type = "t3.medium"  # Dev용 (Prod는 c5.large)
+
+# Auto Scaling 인스턴스 수
+asg_min_size         = 2   # 최소 2개 (고가용성)
+asg_desired_capacity = 4   # 평상시 4개
+asg_max_size         = 20  # 최대 20개 (트래픽 폭증 시)
+
+# ==========================================
+# SSL 인증서 (HTTPS)
+# ==========================================
+# ACM에서 인증서 발급 후 ARN 입력
+# 예: arn:aws:acm:ap-northeast-2:123456789012:certificate/xxxxx
+certificate_arn = ""
+
+# ==========================================
+# 💰 예상 비용 (월간, 서울 리전)
+# ==========================================
+# Dev 환경 (위 설정 기준):
+# - EC2 (t3.medium x 4): ~$120
+# - RDS Aurora (db.t3.medium x 2): ~$120
+# - ElastiCache (cache.t3.micro x 2): ~$30
+# - NAT Gateway (x 2): ~$65
+# - ALB: ~$20
+# - S3, CloudWatch: ~$10
+# --------------------------------
+# 총합: 약 $365/월
+#
+# 비용 절감 팁:
+# 1. enable_nat_gateway = false → $65 절감
+# 2. asg_min_size = 1 → $60 절감
+# 3. redis_num_nodes = 1 → $15 절감
+# 4. 사용 안 할 때: terraform destroy → $0
+# ==========================================
