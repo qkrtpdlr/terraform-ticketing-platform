@@ -1,0 +1,232 @@
+# ============================================
+# Terraform
+# ============================================
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which might contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files you do wish to add to version control using negation pattern
+# !example_override.tf
+
+# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
+*tfplan*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# ============================================
+# AWS Credentials
+# ============================================
+*.pem
+*.key
+*.ppk
+.aws/
+
+# ============================================
+# Maven
+# ============================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# ============================================
+# Java
+# ============================================
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# ============================================
+# Spring Boot
+# ============================================
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ============================================
+# IntelliJ IDEA
+# ============================================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# ============================================
+# VS Code
+# ============================================
+.vscode/
+*.code-workspace
+.history/
+
+# ============================================
+# Eclipse
+# ============================================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# ============================================
+# NetBeans
+# ============================================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ============================================
+# Docker
+# ============================================
+.dockerignore
+docker-compose.override.yml
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+log/
+*.log.*
+
+# ============================================
+# OS Generated Files
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# Environment Variables
+# ============================================
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# Backup Files
+# ============================================
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+
+# ============================================
+# Test Coverage
+# ============================================
+coverage/
+*.cover
+*.py,cover
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ============================================
+# Python (for test scripts)
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# ============================================
+# Node.js (if frontend added)
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================
+# Application Specific
+# ============================================
+# Exclude application.yml with real credentials
+# Keep application.yml.example for reference
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# ============================================
+# Documentation Build Files
+# ============================================
+docs/_build/
+docs/.doctrees/
+site/
+
+# ============================================
+# Security
+# ============================================
+# Never commit secrets or credentials
+secrets/
+credentials/
+*.crt
+*.pem
+*.p12
+*.keystore
