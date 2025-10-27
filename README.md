@@ -615,12 +615,7 @@ terraform-ticketing/
 
 ### 2️⃣ API 문서
 
-<div align="center">
-<img src="ticketing-app/api-documentation.jpeg" width="700" alt="API Documentation"/>
-<p><i>RESTful API 7개 엔드포인트</i></p>
-</div>
-
-**API 엔드포인트:**
+**RESTful API 7개 엔드포인트:**
 
 | Method | Endpoint | 설명 | 인증 |
 |--------|----------|------|------|
@@ -634,14 +629,9 @@ terraform-ticketing/
 
 ---
 
-### 3️⃣ CloudWatch 모니터링
+### 3️⃣ 모니터링 메트릭
 
-<div align="center">
-<img src="ticketing-app/cloudwatch-dashboard.jpeg" width="700" alt="CloudWatch Dashboard"/>
-<p><i>실시간 모니터링 대시보드</i></p>
-</div>
-
-**모니터링 메트릭:**
+**CloudWatch 대시보드 구성:**
 - ✅ ALB Healthy Target Count
 - ✅ EC2 CPU Utilization
 - ✅ RDS Database Connections
