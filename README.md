@@ -50,7 +50,7 @@
 ### 📐 전체 시스템 구조
 
 <div align="center">
-![Architecture Diagram](./ticketing-app/architecture-diagram.jpeg)
+<img src="ticketing-app/architecture-diagram.jpeg" width="800" alt="Architecture Diagram"/>
 </div>
 
 ### 🔄 요청 처리 플로우
