@@ -549,17 +549,9 @@ ticketing-platform/
 
 ---
 
-## 📞 문의
+**Email**: rlagudfo1223@gmail.com  
+**GitHub**: https://github.com/qkrtpdlr
 
-**개발자**: 박세익  
-**Email**: gkstjdlr12@gmail.com  
-**GitHub**: [@yourusername](https://github.com/yourusername)
-
----
-
-## 📄 라이선스
-
-MIT License
 
 ---
 
